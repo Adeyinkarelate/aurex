@@ -1,0 +1,48 @@
+export const pricingData = [
+  {
+    id: 'monthly',
+    title: 'Monthly',
+    badge: null,
+    discountLabel: '10% off',
+    description: 'Ideal for steady facilities that want predictable stewardship without weekly billing cadence.',
+    features: [
+      'Scheduled visits aligned to traffic patterns',
+      'Trash, recycling, and consumables oversight',
+      'Washroom sanitization & restocking',
+      'Vacuuming & hard-floor maintenance',
+      'Dedicated Calgary-based crew lead',
+      'Quality checkpoints each visit',
+    ],
+  },
+  {
+    id: 'biweekly',
+    title: 'Biweekly',
+    badge: 'Most Popular',
+    discountLabel: '20% off',
+    description: 'Balanced frequency for growing teams that need freshness without daily onsite presence.',
+    features: [
+      'Everything in Monthly with tighter rhythm',
+      'Enhanced glass & high-touch detailing',
+      'Kitchen & break room resets',
+      'Quarterly deep-clean coordination',
+      'Priority scheduling adjustments',
+      'Concierge communication channel',
+    ],
+    highlighted: true,
+  },
+  {
+    id: 'weekly',
+    title: 'Weekly',
+    badge: null,
+    discountLabel: '25% off',
+    description: 'Maximum uptime for high-traffic environments where impressions and hygiene matter daily.',
+    features: [
+      'Highest-touch detailing cadence',
+      'Executive-ready reception upkeep',
+      'Flooring programs tuned to weather grit',
+      'Supply forecasting assistance',
+      'Rapid issue escalation protocols',
+      'Vendor-neutral chemistry alignment',
+    ],
+  },
+]

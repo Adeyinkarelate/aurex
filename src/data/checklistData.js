@@ -1,0 +1,37 @@
+export const checklistData = {
+  officesCommon: [
+    'Dust & wipe desks, tables, and accessible surfaces',
+    'Vacuum carpets and mop hard floors',
+    'Empty waste and recycling receptacles',
+    'Clean interior glass, partitions, and mirrors',
+    'Sanitize high-touch points (handles, switches, rails)',
+    'Straighten reception, waiting, and collaborative zones',
+    'Spot-clean walls, doors, and baseboards',
+    'Replenish consumables where supplies are provided onsite',
+  ],
+  washrooms: [
+    'Disinfect toilets, urinals, sinks, and fixtures',
+    'Clean mirrors, countertops, and splash zones',
+    'Restock paper products, soap, and dispensers',
+    'Mop and sanitize flooring with slip-safe products',
+    'Empty sanitary disposal units and feminine hygiene bins',
+  ],
+  kitchenBreak: [
+    'Wipe countertops, shelving, and appliance exteriors',
+    'Sanitize sinks, faucets, and draining trays',
+    'Clean tables, chairs, and communal seating',
+    'Degrease microwave interiors and polish exteriors',
+    'Empty trash, compost, and recycling streams',
+    'Spot-clean backsplashes and splash guards',
+    'Sweep and mop floors with Calgary grit control in mind',
+  ],
+  deepAddons: [
+    'Carpet hot-water extraction',
+    'Floor stripping & refinishing',
+    'Interior glass & partition detailing',
+    'High dusting & vent wiping',
+    'Commercial refrigerator wipe-down',
+    'Locker & staff room refresh',
+    'Pressure washing coordination',
+  ],
+}

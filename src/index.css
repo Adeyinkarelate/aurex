@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-text bg-cream antialiased;
+  }
+
+  ::selection {
+    @apply bg-teal/20 text-text;
+  }
+
+  strong {
+    @apply font-semibold text-text;
+  }
+}
