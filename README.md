@@ -20,7 +20,7 @@ npm run preview
 
 1. Create a free account at [EmailJS](https://www.emailjs.com/).
 2. Add an email service (Gmail, Outlook, etc.) and note the **Service ID**.
-3. Create an email template with these template variables (match the names exactly):
+3. Create an email template with these template variables (match names **exactly**—they map to [`src/components/QuoteForm.jsx`](src/components/QuoteForm.jsx)):
 
    - `{{from_name}}`
    - `{{from_email}}`
@@ -28,10 +28,16 @@ npm run preview
    - `{{company}}`
    - `{{service}}`
    - `{{message}}`
-   - `{{to_email}}` (optional display—messages route through your service inbox)
+   - `{{to_email}}` — routing label (currently `aurexcleanservices@gmail.com`)
+   - `{{sent_at}}` — submission time in Calgary / Mountain timezone
+   - `{{request_id}}` — UUID for the submission
 
-4. Set the template recipient to `aurexcleanservices@gmail.com` (or rely on your connected inbox settings).
-5. Copy `.env.example` to `.env` and paste your IDs:
+   You can paste the ready-made layout from [`email-templates/quote-emailjs.html`](email-templates/quote-emailjs.html).
+
+4. In the EmailJS template UI, set **Reply-To** to `{{from_email}}` so replies go to the visitor.
+
+5. Set the template recipient to `aurexcleanservices@gmail.com` (or rely on your connected inbox settings).
+6. Copy `.env.example` to `.env` and paste your IDs:
 
    ```
    VITE_EMAILJS_SERVICE_ID=your_service_id_here
@@ -39,7 +45,7 @@ npm run preview
    VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
    ```
 
-6. Restart `npm run dev` after changing `.env` (Vite reads env at startup).
+7. Restart `npm run dev` after changing `.env` (Vite reads env at startup).
 
 ## Content source
 

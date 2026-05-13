@@ -1,0 +1,196 @@
+<!-- Paste into EmailJS → Email Templates → Content (HTML).
+     Placeholders match src/components/QuoteForm.jsx template params.
+     In template settings set Reply-To: {{from_email}} -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 14px; background-color: #f0ebe3;">
+  <tr>
+    <td align="center" style="padding: 24px 12px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <!-- Header -->
+        <tr>
+          <td style="background: linear-gradient(135deg, #0a1628 0%, #112240 100%); padding: 30px 24px; text-align: center;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td align="center" style="padding-bottom: 16px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                    <tr>
+                      <td align="center" valign="middle" style="background-color: #2eb8a0; width: 48px; height: 48px; border-radius: 10px; line-height: 48px; font-size: 28px;">🧹</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding: 0;">
+                  <h1 style="color: #ffffff; margin: 0 0 8px 0; font-size: 24px; font-weight: 700;">New Cleaning Request</h1>
+                  <p style="color: rgba(255,255,255,0.7); margin: 0; font-size: 14px;">Aurex Cleaning Services</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+          <td style="padding: 32px 24px; background-color: #ffffff;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td style="padding-bottom: 24px;">
+                  <p style="margin: 0 0 8px 0; font-size: 16px; color: #0f1f36;">
+                    <strong>A new cleaning service request has been submitted</strong>
+                  </p>
+                  <p style="margin: 0; color: #5d6b80; font-size: 13px;">Please respond to this client within 24 hours.</p>
+                </td>
+              </tr>
+
+              <!-- Client name card -->
+              <tr>
+                <td style="background-color: #f6f3ee; border-radius: 10px; padding: 20px; border-left: 4px solid #2eb8a0; padding-bottom: 24px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td width="52" valign="top" style="padding: 8px 8px 8px 0;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td align="center" valign="middle" style="background-color: #eaf8f5; width: 36px; height: 36px; border-radius: 8px; line-height: 36px; font-size: 20px;">👤</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" style="padding: 8px 0;">
+                        <div style="font-size: 18px; font-weight: 700; color: #0a1628;">{{from_name}}</div>
+                        <div style="color: #5d6b80; font-size: 12px; margin-top: 4px;">Client Name</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr><td style="font-size: 0; line-height: 0; height: 24px;">&nbsp;</td></tr>
+
+              <!-- Contact details -->
+              <tr>
+                <td style="padding-bottom: 24px;">
+                  <h2 style="color: #0a1628; font-size: 16px; margin: 0 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid #2eb8a0; display: inline-block;">📞 Contact Details</h2>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse: collapse; margin-top: 16px;">
+                    <tr>
+                      <td style="padding: 12px 8px 12px 0; width: 30px; border-bottom: 1px solid #ece8e0; vertical-align: top;"><span style="font-size: 16px;">📧</span></td>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #ece8e0;">
+                        <div style="color: #5d6b80; font-size: 12px;">Email Address</div>
+                        <div style="color: #0f1f36; font-size: 14px; font-weight: 500;"><a href="mailto:{{from_email}}" style="color: #0f1f36; text-decoration: none;">{{from_email}}</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 8px 12px 0; border-bottom: 1px solid #ece8e0; vertical-align: top;"><span style="font-size: 16px;">📱</span></td>
+                      <td style="padding: 12px 0; border-bottom: 1px solid #ece8e0;">
+                        <div style="color: #5d6b80; font-size: 12px;">Phone Number</div>
+                        <div style="color: #0f1f36; font-size: 14px; font-weight: 500;"><a href="tel:{{phone}}" style="color: #0f1f36; text-decoration: none;">{{phone}}</a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 8px 12px 0; vertical-align: top;"><span style="font-size: 16px;">🏢</span></td>
+                      <td style="padding: 12px 0;">
+                        <div style="color: #5d6b80; font-size: 12px;">Company Name</div>
+                        <div style="color: #0f1f36; font-size: 14px; font-weight: 500;">{{company}}</div>
+                      </td>
+                    </tr>
+                  </table>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 12px;">
+                    <tr>
+                      <td style="padding-top: 8px; padding-bottom: 0;">
+                        <div style="color: #5d6b80; font-size: 11px;">
+                          Routed inbox: <span style="color: #0a1628; font-weight: 500;">{{to_email}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Service -->
+              <tr>
+                <td style="padding-bottom: 24px;">
+                  <h2 style="color: #0a1628; font-size: 16px; margin: 0 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid #2eb8a0; display: inline-block;">🧹 Service Request</h2>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 16px;">
+                    <tr>
+                      <td style="background-color: #eaf8f5; border-radius: 8px; padding: 16px;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="background-color: #2eb8a0; color: #ffffff; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">
+                              Selected Service
+                            </td>
+                          </tr>
+                        </table>
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                          <tr>
+                            <td style="padding-top: 12px; color: #0a1628; font-size: 15px; font-weight: 600;">{{service}}</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Message -->
+              <tr>
+                <td style="padding-bottom: 24px;">
+                  <h2 style="color: #0a1628; font-size: 16px; margin: 0 0 16px 0; padding-bottom: 8px; border-bottom: 2px solid #2eb8a0; display: inline-block;">💬 Additional Details</h2>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top: 16px;">
+                    <tr>
+                      <td style="background-color: #f6f3ee; border-radius: 8px; padding: 16px;">
+                        <div style="color: #5d6b80; font-size: 12px; margin-bottom: 8px;">Client Message:</div>
+                        <div style="color: #0f1f36; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">{{message}}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Submission meta -->
+              <tr>
+                <td style="padding-top: 8px; border-top: 1px solid #ece8e0;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td valign="top" style="padding: 16px 8px 0 0;">
+                        <span style="font-size: 12px; color: #5d6b80;">📅 Submitted (Mountain):</span>
+                        <span style="font-size: 12px; color: #0a1628; font-weight: 500;"> {{sent_at}}</span>
+                      </td>
+                      <td valign="top" align="right" style="padding: 16px 0 0 8px;">
+                        <span style="font-size: 12px; color: #5d6b80;">🆔 Request ID:</span>
+                        <span style="font-size: 12px; color: #0a1628; font-weight: 500;"> {{request_id}}</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+          <td style="background-color: #0a1628; padding: 24px; text-align: center;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tr>
+                <td align="center" style="padding-bottom: 16px;">
+                  <span style="color: #2eb8a0; font-weight: 700; font-size: 18px;">Aurex</span>
+                  <span style="color: #ffffff; font-weight: 700; font-size: 18px;"> Cleaning Services</span>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p style="margin: 8px 0; color: rgba(255,255,255,0.5); font-size: 12px;">
+                    (587) 577-0208 | aurexcleanservices@gmail.com | Calgary, AB
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <p style="margin: 16px 0 0 0; color: rgba(255,255,255,0.3); font-size: 11px;">
+                    This is an automated message from your website contact form. Please respond directly to the client (Reply-To uses their email).
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

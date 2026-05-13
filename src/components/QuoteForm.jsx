@@ -15,6 +15,11 @@ const initialForm = {
 }
 
 const sendEmail = async (formData) => {
+  const sentAt = new Date().toLocaleString('en-CA', {
+    timeZone: 'America/Edmonton',
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  })
   const result = await emailjs.send(
     import.meta.env.VITE_EMAILJS_SERVICE_ID,
     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -26,6 +31,8 @@ const sendEmail = async (formData) => {
       service: formData.service,
       message: formData.message,
       to_email: 'aurexcleanservices@gmail.com',
+      sent_at: sentAt,
+      request_id: crypto.randomUUID(),
     },
     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
   )
