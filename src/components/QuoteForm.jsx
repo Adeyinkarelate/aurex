@@ -34,7 +34,7 @@ const sendEmail = async (formData) => {
       sent_at: sentAt,
       request_id: crypto.randomUUID(),
     },
-    import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    import.meta.env.VITE_EMAILJS_PUBLIC
   )
   return result
 }
@@ -86,7 +86,7 @@ export default function QuoteForm() {
     return Boolean(
       import.meta.env.VITE_EMAILJS_SERVICE_ID &&
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID &&
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC
     )
   }, [])
 

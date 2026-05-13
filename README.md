@@ -42,7 +42,7 @@ npm run preview
    ```
    VITE_EMAILJS_SERVICE_ID=your_service_id_here
    VITE_EMAILJS_TEMPLATE_ID=your_template_id_here
-   VITE_EMAILJS_PUBLIC_KEY=your_public_key_here
+   VITE_EMAILJS_PUBLIC=your_public_key_here
    ```
 
 7. Restart `npm run dev` after changing `.env` (Vite reads env at startup).
