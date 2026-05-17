@@ -4,42 +4,45 @@ import { ScrollReveal } from '../hooks/ScrollReveal.jsx'
 
 export default function Pricing() {
   return (
-    <section className="bg-navy py-20 sm:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-navy py-20 sm:py-28">
+      <div className="pointer-events-none absolute inset-0 bg-mesh-dark opacity-90" aria-hidden />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Pricing frameworks</p>
-          <h2 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">
-            Cadence discounts for recurring Calgary partnerships.
+          <p className="inline-flex rounded-full border border-gold/25 bg-gold/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold-light">
+            Pricing
+          </p>
+          <h2 className="section-title mt-6 text-white">
+            Better rates when you book recurring service.
           </h2>
-          <p className="mt-4 text-teal-pale/85">
-            Final proposals reflect square footage, specialty scopes, and ingress windows—submit the quote form for an
-            exact figure within 24 hours.
+          <p className="mt-5 text-lg leading-relaxed text-slate-400">
+            Final numbers reflect square footage, specialty work, and when crews can access your space—use the quote form
+            for a firm price within 24 hours.
           </p>
         </ScrollReveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {pricingData.map((plan) => (
-            <ScrollReveal key={plan.id}>
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {pricingData.map((plan, i) => (
+            <ScrollReveal key={plan.id} delayMs={i * 80}>
               <article
-                className={`relative flex h-full flex-col rounded-3xl border bg-navy-mid/70 p-8 shadow-card backdrop-blur transition hover:-translate-y-1 hover:shadow-lift ${
+                className={`relative flex h-full flex-col rounded-2xl border bg-white/[0.04] p-8 shadow-card backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-lift ${
                   plan.highlighted
-                    ? 'border-gold/50 ring-2 ring-gold/35'
+                    ? 'border-gold/40 ring-2 ring-gold/25'
                     : 'border-white/10 hover:border-teal/35'
                 }`}
               >
                 {plan.badge && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-navy">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-gold to-gold-light px-4 py-1 text-[10px] font-bold uppercase tracking-wide text-navy shadow-card">
                     {plan.badge}
                   </span>
                 )}
                 <div className="text-center">
-                  <h3 className="font-display text-xl font-bold text-white">{plan.title}</h3>
-                  <p className="mt-3 inline-flex rounded-full bg-teal/15 px-4 py-1 text-sm font-bold text-teal-pale ring-1 ring-teal/25">
+                  <h3 className="font-sans text-xl font-semibold tracking-tight text-white">{plan.title}</h3>
+                  <p className="mt-4 inline-flex rounded-full bg-teal/15 px-4 py-1.5 text-sm font-bold text-teal-pale ring-1 ring-teal/25">
                     {plan.discountLabel}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-teal-pale/80">{plan.description}</p>
+                  <p className="mt-5 text-sm leading-relaxed text-slate-400">{plan.description}</p>
                 </div>
-                <ul className="mt-8 flex-1 space-y-3 text-sm text-teal-pale/90">
+                <ul className="mt-8 flex-1 space-y-3 text-sm text-slate-300">
                   {plan.features.map((f) => (
                     <li key={f} className="flex gap-3">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-teal" aria-hidden />
@@ -49,13 +52,13 @@ export default function Pricing() {
                 </ul>
                 <a
                   href="#quote"
-                  className={`mt-10 inline-flex w-full justify-center rounded-full px-5 py-3 text-sm font-semibold transition hover:-translate-y-px ${
+                  className={`mt-10 inline-flex w-full justify-center rounded-full px-5 py-3 text-sm font-semibold transition duration-300 hover:-translate-y-px active:scale-[0.98] ${
                     plan.highlighted
-                      ? 'bg-teal text-white hover:bg-teal-dark'
-                      : 'border border-white/20 bg-white/5 text-white hover:border-teal hover:bg-teal/10'
+                      ? 'btn-primary shadow-glow'
+                      : 'border border-white/15 bg-white/[0.06] text-white hover:border-teal/40 hover:bg-teal/10'
                   }`}
                 >
-                  Request this cadence
+                  Request this plan
                 </a>
               </article>
             </ScrollReveal>
@@ -65,3 +68,4 @@ export default function Pricing() {
     </section>
   )
 }
+

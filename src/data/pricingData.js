@@ -4,7 +4,7 @@ export const pricingData = [
     title: 'Monthly',
     badge: null,
     discountLabel: '10% off',
-    description: 'Ideal for steady facilities that want predictable stewardship without weekly billing cadence.',
+    description: 'Ideal for steady facilities that want predictable monthly billing instead of every week.',
     features: [
       'Scheduled visits aligned to traffic patterns',
       'Trash, recycling, and consumables oversight',
@@ -26,7 +26,7 @@ export const pricingData = [
       'Kitchen & break room resets',
       'Quarterly deep-clean coordination',
       'Priority scheduling adjustments',
-      'Concierge communication channel',
+      'Direct access to your crew lead',
     ],
     highlighted: true,
   },
@@ -37,12 +37,12 @@ export const pricingData = [
     discountLabel: '25% off',
     description: 'Maximum uptime for high-traffic environments where impressions and hygiene matter daily.',
     features: [
-      'Highest-touch detailing cadence',
+      'Highest-touch detailing on every visit',
       'Executive-ready reception upkeep',
       'Flooring programs tuned to weather grit',
       'Supply forecasting assistance',
       'Rapid issue escalation protocols',
-      'Vendor-neutral chemistry alignment',
+      'Works with your preferred products when your lease or policies require it',
     ],
   },
 ]

@@ -4,13 +4,13 @@ export const industriesData = [
     icon: 'Building2',
     title: 'Offices',
     description:
-      'Board-ready cleans for towers, creative studios, and hybrid workplaces across Calgary’s core and suburbs.',
+      'Presentation-ready cleaning for towers, creative studios, and hybrid workplaces across Calgary’s core and suburbs.',
   },
   {
     icon: 'UtensilsCrossed',
     title: 'Restaurants & Hospitality',
     description:
-      'Front-of-house sparkle and back-of-house diligence aligned with inspection-ready sanitation rhythms.',
+      'Front-of-house polish and back-of-house thoroughness that supports everyday operations and inspections.',
   },
   {
     icon: 'Stethoscope',
@@ -40,7 +40,7 @@ export const industriesData = [
     icon: 'Warehouse',
     title: 'Warehouses & Industrial',
     description:
-      'Office pods, lunchrooms, and ingress lanes cleared of prairie grit without slowing operations.',
+      'Office areas, lunchrooms, and main entries cleared of tracked-in dirt and debris without slowing the floor.',
   },
   {
     icon: 'Scissors',

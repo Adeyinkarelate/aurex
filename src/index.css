@@ -2,20 +2,185 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes heroKenBurns {
+  0%,
+  100% {
+    transform: scale(1.01) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.045) translate3d(-0.6%, 0.4%, 0);
+  }
+}
+
+@keyframes heroStripShine {
+  0%,
+  100% {
+    transform: translateX(-120%) skewX(-12deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(120%) skewX(-12deg);
+    opacity: 0.2;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans text-text bg-cream antialiased;
+    @apply font-sans text-text antialiased bg-white;
+    background-image: theme(backgroundImage.mesh-light);
+    background-attachment: fixed;
   }
 
   ::selection {
-    @apply bg-teal/20 text-text;
+    @apply bg-teal/25 text-navy;
   }
 
   strong {
     @apply font-semibold text-text;
+  }
+}
+
+@layer utilities {
+  /* Plain delay-* for non–motion-safe stagger (e.g. hero trust row + ScrollReveal delays) */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .hero-animated-bg {
+    transform-origin: center center;
+    backface-visibility: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-animated-bg {
+      animation: heroKenBurns 38s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+      will-change: transform;
+    }
+  }
+
+  /* Premium hero photo frame + subtle shine */
+  .hero-premium-frame {
+    position: relative;
+    border-radius: 1.35rem;
+    padding: 1px;
+    background: linear-gradient(
+      145deg,
+      rgba(37, 99, 235, 0.28),
+      rgba(241, 245, 249, 0.95) 42%,
+      rgba(245, 158, 11, 0.22)
+    );
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.85) inset,
+      0 24px 56px -18px rgba(37, 99, 235, 0.14),
+      0 12px 32px -16px rgba(15, 23, 42, 0.08);
+  }
+
+  .hero-premium-inner {
+    border-radius: calc(1.35rem - 1px);
+    overflow: hidden;
+    background: theme(colors.border.light);
+  }
+
+  .hero-strip-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-strip-shine::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      width: 45%;
+      background: linear-gradient(
+        105deg,
+        transparent,
+        rgba(255, 255, 255, 0.14),
+        transparent
+      );
+      animation: heroStripShine 11s ease-in-out infinite;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-safe\:animate-fade-up,
+  .motion-safe\:animate-fade-in,
+  .motion-safe\:animate-reveal-soft,
+  .motion-safe\:animate-slide-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .motion-safe\:animate-mint-shimmer {
+    animation: none !important;
+  }
+
+  .motion-safe\:animate-float,
+  .motion-safe\:animate-shift-slow,
+  .hero-animated-bg {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  .hero-strip-shine::after {
+    animation: none !important;
+    display: none;
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-teal/20 bg-teal-faint px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-deeper;
+  }
+
+  .section-title {
+    @apply font-sans text-[2rem] font-bold leading-[1.15] tracking-tight text-navy sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-border-light bg-white shadow-card transition duration-300 ease-out;
+  }
+
+  .card-surface-hover {
+    @apply hover:-translate-y-1 hover:border-teal/25 hover:shadow-lift;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-white shadow-card transition duration-300 hover:bg-teal-dark hover:shadow-glow active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 text-sm font-semibold text-navy shadow-sm transition duration-300 hover:border-teal/40 hover:text-teal-deeper active:scale-[0.98];
   }
 }

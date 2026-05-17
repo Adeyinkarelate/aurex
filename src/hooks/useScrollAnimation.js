@@ -13,8 +13,9 @@ export function useScrollAnimation(options = {}) {
 
   const style = {
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0)' : 'translateY(20px)',
-    transition: 'opacity 0.7s ease-out, transform 0.7s ease-out',
+    transform: inView ? 'translateY(0)' : 'translateY(24px)',
+    transition:
+      'opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1)',
   }
 
   return { ref, style, inView }

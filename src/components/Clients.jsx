@@ -2,35 +2,33 @@ import { ScrollReveal } from '../hooks/ScrollReveal.jsx'
 
 export default function Clients() {
   return (
-    <section className="border-y border-border-light bg-cream py-14">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="border-y border-border-light bg-white/60 py-16 backdrop-blur-sm">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-teal-dark">
-            Trusted alongside Calgary operators
-          </p>
+          <p className="section-eyebrow mx-auto">Trusted alongside Calgary operators</p>
         </ScrollReveal>
-        <div className="mt-10 flex flex-col items-center justify-center gap-8 sm:flex-row sm:flex-wrap sm:gap-12 lg:gap-16">
-          <ScrollReveal className="flex flex-col items-center">
-            <span className="rounded-2xl border border-border bg-white px-10 py-6 font-display text-xl font-bold tracking-wide text-navy shadow-card">
+        <div className="mt-12 flex flex-col items-center justify-center gap-10 sm:flex-row sm:flex-wrap sm:gap-14 lg:gap-20">
+          <ScrollReveal className="flex flex-col items-center" delayMs={80}>
+            <span className="rounded-2xl border border-border-light bg-white px-12 py-7 font-sans text-xl font-semibold tracking-tight text-navy shadow-card transition duration-300 hover:border-teal/25 hover:shadow-lift">
               Milestones
             </span>
-            <span className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
-              Hospitality partner
+            <span className="mt-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
+              Hospitality client
             </span>
           </ScrollReveal>
-          <ScrollReveal className="flex flex-col items-center">
-            <span className="rounded-2xl border border-border bg-white px-10 py-6 font-display text-xl font-bold tracking-wide text-navy shadow-card">
+          <ScrollReveal className="flex flex-col items-center" delayMs={140}>
+            <span className="rounded-2xl border border-border-light bg-white px-12 py-7 font-sans text-xl font-semibold tracking-tight text-navy shadow-card transition duration-300 hover:border-teal/25 hover:shadow-lift">
               Alloy Dining
             </span>
-            <span className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+            <span className="mt-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
               Restaurant group
             </span>
           </ScrollReveal>
-          <ScrollReveal className="flex flex-col items-center">
-            <span className="rounded-2xl border border-dashed border-teal/40 bg-teal/10 px-10 py-6 font-display text-lg font-semibold text-teal-deeper">
+          <ScrollReveal className="flex flex-col items-center" delayMs={200}>
+            <span className="rounded-2xl border border-dashed border-teal/35 bg-teal-faint/80 px-10 py-7 font-sans text-lg font-semibold text-teal-deeper transition duration-300 hover:border-teal/50 hover:bg-teal-faint">
               + more across Calgary
             </span>
-            <span className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+            <span className="mt-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
               Offices · Retail · Medical · Industrial
             </span>
           </ScrollReveal>
@@ -39,3 +37,4 @@ export default function Clients() {
     </section>
   )
 }
+

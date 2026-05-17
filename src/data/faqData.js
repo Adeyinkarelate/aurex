@@ -10,22 +10,22 @@ export const faqData = [
   {
     question: 'Are you insured and bonded?',
     answer:
-      'Yes. Aurex carries coverage suited for commercial environments and can provide certificates for landlords or corporate procurement teams upon request.',
+      'Yes. Aurex carries coverage suited for commercial environments and can provide certificates for landlords, property managers, or your head office upon request.',
   },
   {
     question: 'Do crews bring equipment and supplies?',
     answer:
-      'Unless your facility mandates proprietary chemistry or dispensers, our teams arrive with commercial-grade tools and EPA-aligned products. We adapt if your building specifies preferred vendors.',
+      'Unless your facility mandates specific products or dispensers, our teams arrive with commercial-grade tools and appropriate cleaners. We adapt if your building names preferred vendors.',
   },
   {
     question: 'How do you price commercial cleaning?',
     answer:
-      'Pricing reflects square footage, weekly traffic, scope depth (recurring vs. deep), hours required, and any specialty protocols like sanitization ladders or post-construction residue removal.',
+      'Pricing reflects square footage, how busy the space is, scope depth (regular maintenance vs. deep clean), time on site, and any specialty work such as disinfection plans or post-construction cleanup.',
   },
   {
     question: 'Can we customize scopes per department?',
     answer:
-      'Absolutely. We document bespoke punch lists—labs vs. bullpens vs. boardrooms—so audits stay predictable and leadership tours stay stress-free.',
+      'Absolutely. We document tailored checklists by area—labs, open floor, boardrooms—so expectations stay clear for your team and ours.',
   },
   {
     question: 'What happens if we need to reschedule?',
